@@ -4,8 +4,8 @@ import { DocsThemeConfig, useConfig } from 'nextra-theme-docs';
 function useHead() {
   const { asPath } = useRouter();
   const { frontMatter, title } = useConfig();
-  const url = `https://overextended.dev${asPath}`;
-  const description = frontMatter.description || "Documentation for Overextended's resources for FiveM/RedM";
+  const url = `https://retake.github.io${asPath}`;
+  const description = frontMatter.description || "Documentation for Retake Studio's resources for FiveM/RedM";
 
   return (
     <>
@@ -23,7 +23,7 @@ function useHead() {
 function useNextSeoProps() {
   const { asPath } = useRouter();
   const arr = asPath.replace(/[-_]/g, ' ').split('/');
-  const category = (arr[1][0] !== '#' && arr[1]) || 'Overextended';
+  const category = (arr[1][0] !== '#' && arr[1]) || 'Retake Studio';
   const rawTitle = arr[arr.length - 1];
   const title = /[a-z]/.test(rawTitle) && /[A-Z]/.test(rawTitle) ? rawTitle : '%s';
 
@@ -49,14 +49,14 @@ const config: DocsThemeConfig = {
     </div>
   ),
   project: {
-    link: 'https://github.com/overextended/overextended.github.io',
+    link: 'https://github.com/Retake-Studio/retake.github.io',
   },
   chat: {
-    link: 'https://discord.overextended.dev',
+    link: 'https://discord.gg/UMwpRHkUtg',
   },
-  docsRepositoryBase: 'https://github.com/overextended/overextended.github.io/blob/main',
+  docsRepositoryBase: 'https://github.com/Retake-Studio/retake.github.io/blob/main',
   footer: {
-    text: 'Overextended',
+    text: 'Retake Studio',
   },
   // search: {
   //   component: <Search />,
