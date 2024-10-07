@@ -1,0 +1,16 @@
+# JSON Client
+
+### Load JSON File
+
+``rtk.json.load`` is a function that allows you to load a JSON file from the resource folder.
+
+- type: `function`
+- parameters: 
+    - `filePath`: `string` - The name of the file to load.
+    - `resourceName?`: `string` - The name of the resource to load the file from.
+- return: `table`
+
+```lua
+local data <const> = rtk.json.load('data.fileName')
+print(data) -- output: { hello = "world" }
+```
