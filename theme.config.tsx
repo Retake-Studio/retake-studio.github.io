@@ -56,7 +56,12 @@ const config: DocsThemeConfig = {
   },
   docsRepositoryBase: 'https://github.com/Retake-Studio/retake.github.io/blob/main',
   footer: {
-    text: 'Retake Studio',
+    text: (
+      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', width: '100%' }}>
+        <span>Retake Studio</span>
+        <img src="/static/poweredby.png" alt="Retake Studio Logo" className="w-auto h-8" style={{ maxHeight: '40px', maxWidth: '100%' }} />
+      </div>
+    ),
   },
   // search: {
   //   component: <Search />,
