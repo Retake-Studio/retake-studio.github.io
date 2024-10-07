@@ -1,0 +1,51 @@
+{/* import { Callout } from 'nextra/components';*/}
+{/* <Callout type="info">
+    **Welcome to Retake Studio**
+</Callout> */}
+
+import { Tabs, Tab, Steps } from 'nextra-theme-docs';
+import { GithubRepoButton } from '@components/Button';
+
+# Retake Library
+
+A standalone library, importable and exportable code used in **Retake Studio** resources.
+
+<GithubRepoButton link="https://github.com/Retake-Studio/rtk_lib" />
+
+## Installation
+
+<Steps>
+
+### Download a [release](https://github.com/Retake-Studio/rtk_lib/releases) from the GitHub repository.
+
+### Configuration
+
+Resource configuration uses **convars**:
+
+```cfg
+setr rtk_lib:locale en
+```
+
+</Steps>
+
+## Usage
+
+To use the library, you need to import it into your resource's ``fxmanifest.lua`` :
+
+```lua
+shared_script '@rtk_lib/import.lua'
+```
+
+Or if you have multiple shared scripts :
+
+```lua
+shared_scripts {
+    '@rtk_lib/import.lua',
+}
+```
+
+## Providers
+
+When you import the library into your script, you don't need to import [**oxmysql**](https://github.com/overextended/oxmysql) because it's already included in the library.
+We also provide functions for **ESX**, **QB/QBox**, and even your **own framework** (more details to come).
+We are also working on provider functions for **inventory** scripts.
