@@ -1,0 +1,34 @@
+# JSON Server
+
+### Save JSON File
+
+``rtk.json.save`` is a function that allows you to save a table to a JSON file in the resource folder.
+
+- type: `function`
+- parameters: 
+    - `filePath`: `string` - The name of the file to save.
+    - `data`: `table` - The data to save.
+    - `resourceName?`: `string` - The name of the resource to save the file to.
+    - `dataLength?`: `number` - The length of the data to save.
+- return: `boolean`
+
+```lua
+rtk.json.save('data.fileName', { hello = "world" })
+```
+
+---
+
+### Load JSON File
+
+``rtk.json.load`` is a function that allows you to load a JSON file from the resource folder.
+
+- type: `function`
+- parameters: 
+    - `filePath`: `string` - The name of the file to load.
+    - `resourceName?`: `string` - The name of the resource to load the file from.
+- return: `table`
+    
+```lua
+local data <const> = rtk.json.load('data.fileName')
+print(data) -- output: { hello = "world" }
+```
