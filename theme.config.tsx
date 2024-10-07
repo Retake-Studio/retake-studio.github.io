@@ -35,6 +35,10 @@ function useNextSeoProps() {
 }
 
 const config: DocsThemeConfig = {
+  i18n: [
+    { locale: 'en-US', text: 'English' },
+    { locale: 'fr-FR', text: 'French' },
+  ],
   logo: (
     <div
       style={{

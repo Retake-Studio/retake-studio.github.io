@@ -4,8 +4,11 @@ const withNextra = require('nextra')({
 });
 
 module.exports = withNextra({
-  output: 'export',
   images: {
     unoptimized: true,
   },
+  i18n: {
+    locales: ['en-US', 'fr-FR'],
+    defaultLocale: 'en-US'
+  }
 });
