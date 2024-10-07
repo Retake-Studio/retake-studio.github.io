@@ -1,13 +1,13 @@
 import React from 'react';
 
-interface BannerProps {
+interface PartnerBannerProps {
   imageUrl: string;
   altText?: string;
   height?: string;
   onClick?: () => void;
 }
 
-const Banner: React.FC<BannerProps> = ({ imageUrl, altText = 'Banner image', height = 'h-32', onClick }) => {
+const PartnerBanner: React.FC<PartnerBannerProps> = ({ imageUrl, altText = 'Banner image', height = 'h-32', onClick }) => {
   return (
     <div 
       className={`w-full ${height} relative overflow-hidden rounded-2xl ${onClick ? 'cursor-pointer' : 'cursor-default'}`} // Utilisation de Tailwind pour le curseur
@@ -22,4 +22,4 @@ const Banner: React.FC<BannerProps> = ({ imageUrl, altText = 'Banner image', hei
   );
 };
 
-export default Banner;
+export default PartnerBanner;
