@@ -1,0 +1,45 @@
+import { Callout } from 'nextra/components';
+
+# Player Client
+
+### Player variables global
+
+``player`` - Is a global variable that contains information about the player.
+
+- type: `table`
+- fields:
+    - `id`: `number` - The player's id `PlayerId`.
+    - `serverid`: `number` - The player's server ID `GetPlayerServerId`.
+    - `ped`: `number` - The player's ped `PlayerPedId`.
+    - `weapon`: `number | false` - The player's weapon `GetCurrentPedWeapon`.
+    - `vehicle`: `number | false` - The player's vehicle `GetVehiclePedIsIn`.
+    - `seat`: `number | false` - The player's seat `GetPedInVehicleSeat`.
+
+```lua
+print(player.id)
+print(player.serverid)
+print(player.ped)
+print(player.weapon)
+print(player.vehicle)
+print(player.seat)
+```
+
+### Player events
+
+<Callout type="info">
+    That use [`on`](../on/client#on-player-register-with-listener) module to listen to player events.
+</Callout>
+
+``rtk.on.player`` - Is a function that allows you to listen to player events.
+
+- type: `function`
+- parameters: 
+    - `key`: `string` - The field to listen to.
+    - `callback`: `fun(value: any)` - The function to call when the field changes.
+- return: `void`
+
+```lua
+rtk.on.player('ped', function(value) 
+    print('old value: '..player.ped, 'new value: '..value) 
+end)
+```
