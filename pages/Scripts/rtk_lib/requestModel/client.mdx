@@ -1,0 +1,15 @@
+# RequestModel Client
+
+### Load RequestModel
+
+``rtk.requestModel`` - Load a RequestModel
+
+- type: `function`
+- parameters: 
+    - `model`: `string` - Name of the RequestModel to load.
+    - `timeout?`: `number` - Time in milliseconds to wait for the RequestModel to load.
+- return: `number`
+
+```lua
+local model <const> = rtk.requestModel('adder')
+```
