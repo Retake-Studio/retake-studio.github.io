@@ -1,0 +1,36 @@
+import { Callout } from 'nextra/components';
+
+# Version Script
+
+<Callout type="warning">
+    Your resource must have a `version` in the `fxmanifest.lua` file.
+</Callout>
+
+``rtk.version`` - Get the version of the resource.
+
+- type: `function`
+- parameters: 
+    - `url`: `string` - The URL of the resource.
+    - `timer?`: `number` - The time in milliseconds to wait for the version.
+    - `isBeta?`: `boolean` - If the version is beta.
+    - `callback?`: `fun(resp: table)` - The function callback passing the response.
+- return: `void`
+
+### Use Github
+
+``github`` argument get the version of the resource from Github.
+Your repository must have a `releases` page and name of the repository must be the same as the resource name.
+
+```lua
+rtk.version('github')
+```
+
+### Use URL
+
+``url`` argument get the version of the resource from a URL.
+
+```lua
+rtk.version('https://example.com/version.json', 1000, nil, function(resp)
+    print(json.encode(resp, { indent = true, sort_keys = true }))
+end)
+```
