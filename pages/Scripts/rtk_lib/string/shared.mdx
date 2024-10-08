@@ -1,0 +1,76 @@
+# String Shared
+
+### Starts
+
+``rtk.string.starts`` - Check if a string starts with a specific string.
+
+- type: `function`
+- parameters: 
+    - `str`: `string` - The string to check.
+    - `start`: `string` - The string to check if the `str` starts with.
+- return: `boolean`
+
+```lua
+local str <const> = 'Hello, World!'
+print(rtk.string.starts(str, 'Hello')) -- output: true
+```
+
+---
+
+### First To Upper
+
+``rtk.string.firstToUpper`` - Convert the first character of a string to uppercase.
+
+- type: `function`
+- parameters: 
+    - `str`: `string` - The string to convert.
+- return: `string`
+
+```lua
+local str <const> = 'hello, world!'
+print(rtk.string.firstToUpper(str)) -- output: 'Hello, world!'
+```
+
+---
+
+### Random String
+
+``rtk.string.random`` - Generate a random string.
+
+- type: `function`
+- parameters: 
+    - `length`: `number` - The length of the random string.
+    - `data?`: `table` - The data to generate the random string.
+        - upperCase: `boolean` - Include uppercase characters.
+        - lowerCase: `boolean` - Include lowercase characters.
+        - numbers: `boolean` - Include numbers.
+        - symbols: `boolean` - Include special characters.
+- return: `string`
+
+```lua
+local str <const> = rtk.string.random(10)
+print(str) -- output: 'aBcD1!2@3#'
+```
+
+Or you can specify the data to generate the random string.
+
+```lua
+local str <const> = rtk.string.random(10, { upperCase = true, numbers = true, symbols = true })
+print(str) -- output: 'A1!2@3#4DC'
+```
+
+---
+
+### UUID
+
+``rtk.string.uuid`` - Generate a UUID.
+
+- type: `function`
+- return: `string`
+
+```lua
+local uuid <const> = rtk.string.uuid()
+print(uuid) -- output: '550e8400-e29b-41d4-a716-446655440000'
+```
+
+---
