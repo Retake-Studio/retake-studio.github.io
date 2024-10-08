@@ -1,0 +1,19 @@
+# EXPORTS Shared
+
+### Exports
+
+``rtk.exports`` - Play exports function in other resource.
+
+- type: `function`
+- parameters: 
+    - `resourceName.methodName`: `string` - Name of resource with method name.
+    - `...`: `unknown` - Arguments to pass to the method.
+- return: `unknown`
+
+```lua
+rtk.exports('resourceName.methodName', 'Hello, World!')
+```
+
+---
+
+``rtk.exports.class`` todo
