@@ -1,0 +1,66 @@
+# Table Shared
+
+### Clone Table
+
+``rtk.table.clone`` - Clone a table.
+
+- type: `function`
+- parameters: 
+    - `table`: `table` - Table to clone.
+- return: `table`
+
+```lua
+local data <const> = rtk.table.clone({ hello = "world" })
+print(data) -- output: { hello = "world" }
+```
+
+---
+
+### Contains Value
+
+``rtk.table.contains`` - Check if a table contains a specific value.
+
+- type: `function`
+- parameters: 
+    - `table`: `table` - Table to check.
+    - `value`: `any` - Value to check if the table contains.
+- return: `boolean`
+
+```lua
+local data <const> = { hello = "world", rtk = "table" }
+print(rtk.table.contains(data, "world")) -- output: true
+```
+
+---
+
+### To Vector3
+
+``rtk.table.toVec3`` - Convert a table to a Vector3.
+
+- type: `function`
+- parameters: 
+    - `coords`: `table` - Table to convert.
+- return: `vec3`
+
+```lua
+local data <const> = rtk.table.toVec3({ x = 1, y = 2, z = 3 })
+print(data) -- output: vec3(1, 2, 3)
+```
+
+---
+
+### To Vector4
+
+``rtk.table.toVec4`` - Convert a table to a Vector4.
+
+- type: `function`
+- parameters: 
+    - `coords`: `table` - Table to convert.
+- return: `vec4`
+
+```lua
+local data <const> = rtk.table.toVec4({ x = 1, y = 2, z = 3, h = 4 })
+print(data) -- output: vec4(1, 2, 3, 4)
+```
+
+---
