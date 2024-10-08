@@ -1,0 +1,59 @@
+import { Callout } from 'nextra/components';
+
+# On Client
+
+### On Listener
+
+``rtk.on`` - Is a function that allows you to listen to events.
+
+- type: `function` as `AddEventHandler`
+- parameters: 
+    - `name`: `string` - The name of the event to listen to.
+    - `callback`: `fun(...: unknown)` - The function to call when the event is triggered.
+- return: `void`
+
+```lua
+rtk.on('eventName', function(...) 
+    print('event triggered', ...)
+end)
+```
+
+---
+
+### On Netowrk Register with Listener
+
+``rtk.on.net`` - Is a function that allows you to listen to network events.
+
+- type: `function` as `RegisterNetEvent`
+- parameters: 
+    - `name`: `string` - The name of the event to listen to.
+    - `callback?`: `fun(...: unknown)` - The function to call when the event is triggered.
+- return: `void`
+
+```lua
+rtk.on.net('eventName', function(...) 
+    print('event triggered', ...)
+end)
+```
+
+---
+
+### On Player Register with Listener
+
+``rtk.on.player`` - Is a function that allows you to listen to player events.
+
+<Callout type="info">
+    Refer to the `key` fields of the player [here](../player/client).
+</Callout>
+
+- type: `function`
+- parameters: 
+    - `key`: `string` - The field to listen to.
+    - `callback`: `fun(value: any)` - The function to call when the field changes.
+- return: `void`
+
+```lua
+rtk.on.player('ped', function(value) 
+    print('old value: '..player.ped, 'new value: '..value) 
+end)
+```
